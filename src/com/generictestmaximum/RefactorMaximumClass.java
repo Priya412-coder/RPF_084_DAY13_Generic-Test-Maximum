@@ -3,12 +3,7 @@ package com.generictestmaximum;
 public class RefactorMaximumClass<M extends Comparable<M>> {
 	M a , b , c ;
 
-	public RefactorMaximumClass(M a, M b,M c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
-	}
-	public static <M extends Comparable<M>> M getMaxint(M a , M b , M c ) {
+	public M getMax(M a , M b , M c ) {
 		M max = a;
 		if (b.compareTo(max) > 0 ) {
 			max = b;
@@ -38,8 +33,14 @@ public class RefactorMaximumClass<M extends Comparable<M>> {
 		Float aFl = 1.2f , bFl = 8.2f , cFl = 60.2f ;
 		String aStr = "Priyanka" , bStr = "Priyan" , cStr = "Priya" ;
 
-		RefactorMaximumClass.getMaxStr(aStr, bStr, cStr);
-		RefactorMaximumMethod.getMaxint(aInt, bInt, cInt);
-		RefactorMaximumMethod.getMaxDoub(aFl, bFl, cFl);
+		RefactorMaximumClass<String> refactorMaximumClass = new RefactorMaximumClass();
+		RefactorMaximumClass<Integer> refactorMaximumClass1 = new RefactorMaximumClass();
+		RefactorMaximumClass<Float> refactorMaximumClass11 = new RefactorMaximumClass();
+
+		System.out.println(refactorMaximumClass.getMax(aStr, bStr, cStr));
+
+		//refactorMaximumClass11.getMax(aStr, bStr, cStr);
+		//RefactorMaximumMethod.getMax(aInt, bInt, cInt);
+		//RefactorMaximumMethod.getMaxDoub(aFl, bFl, cFl);
 	}
 }
