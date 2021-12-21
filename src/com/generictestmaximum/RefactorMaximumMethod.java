@@ -2,7 +2,7 @@ package com.generictestmaximum;
 
 public class RefactorMaximumMethod {
 
-public static <M extends Comparable> M getMax(M a , M b , M c ) {
+public static <M extends Comparable<M>> M getMax(M a , M b , M c ) {
 	if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
 		return a;
 	} else if (b.compareTo(a) > 0 && b.compareTo(c) > 0) {
